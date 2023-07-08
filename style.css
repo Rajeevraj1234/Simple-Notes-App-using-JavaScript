@@ -1,0 +1,147 @@
+*{
+    font-family: 'Concert One', cursive;
+    /* font-family: 'Yeseva One', cursive; */
+    box-sizing: border-box;
+}
+
+body{
+    background-color: skyblue;
+    max-width: 100vw;
+    max-height: 100vh;
+    background-color: rgb(1, 1, 21);
+}
+
+h1{
+    font-size: 100px;
+    margin-left: 50px;
+    user-select: none;
+    color: white;
+}
+
+.addNoteBtn{
+    /* display: inline-block; */
+    margin-left: 40px;
+    font-size: 30px;
+    padding: 15px 55px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    /* background-color: rgba(1, 1, 26, 0.979); */
+    /* color: white; */
+    margin-bottom: 30px;
+    transition: 0.5s ease;
+}
+
+.btn-one {
+    color: #FFF;
+    transition: all 0.3s;
+    position: relative;
+    display: inline-block;
+  }
+  .btn-one span {
+    transition: all 0.3s;
+  }
+  .btn-one::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: green;
+    border-bottom-color: green;
+    transform: scale(0.1, 1);
+  }
+  .btn-one:hover span {
+    letter-spacing: 2px;
+  }
+  .btn-one:hover::before {
+    opacity: 1; 
+    transform: scale(1, 1); 
+  }
+  .btn-one::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.3s;
+    background-color: rgba(255,255,255,0.1);
+    /* background-color: rgba(255, 0, 0, 0.1); */
+  }
+  .btn-one:hover::after {
+    opacity: 0; 
+    transform: scale(0.1, 1);
+  }
+
+/* .addNoteBtn:hover{
+    background-color: rgb(1, 1, 26);
+    transform: scale(1.1);
+} */
+
+.notesBox{
+    /* border: 1px solid black; */
+    display: inline-block;
+    margin: 20px;
+    height: 250px;
+    width: 400px;
+    padding: 10px;
+    /* position: relative; */
+    margin-left: 30px;
+    transition: 1s linear;
+
+}
+
+.inputBox{
+    border: 1px solid black;
+    display: block;
+    height: 85%;
+    width: 100%;
+    resize: none;
+    /* box-shadow: 0 0 20px gray; */
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 20px;
+    font-size: 20px;
+    background-color: #fff;
+    overflow: scroll;
+    font-weight: lighter;
+    font-family: monospace;
+}
+
+.notesBox span{
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 100%;
+    margin-top: 5px;
+    right: 40px;
+    bottom: 40px;
+    cursor: pointer;
+    font-size: 23px;
+    color: red;
+    /* box-shadow: 0 0 10px white; */
+    border-radius: 10px;
+    background-color: rgb(26, 25, 25);
+    transition: 0.3s ease-in-out;
+}
+
+.notesBox span:hover{
+    background-color: red;
+    color: black;
+    font-weight: bolder;
+    transform: scale(0.95);
+    box-shadow: 0 0 20px red;
+}
